@@ -1,3 +1,4 @@
-function handleClick(paragraphNumber) {
-    alert('Parágrafo ' + paragraphNumber + ' clicado!');
-}
+document.getElementById("cupomBtn").addEventListener("click", function() {
+    navigator.clipboard.writeText("PRIMEIRACOMPRA");
+    alert("Cupom copiado: PRIMEIRACOMPRA");
+});
