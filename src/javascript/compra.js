@@ -3,7 +3,7 @@ function comprarProduto(nome, preco, img) {
     localStorage.setItem("produtoNome", nome);
     localStorage.setItem("produtoPreco", preco);
     localStorage.setItem("produtoImg", img);
-    window.location.href = "pages/compra.html";
+    window.location.href = "../src/html/compra.html";
 }
 
 // Exibe os detalhes do produto na página de compra
