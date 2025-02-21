@@ -1,0 +1,72 @@
+header {
+    padding: 15px 0;
+    font-weight: bold;
+    background-color: #4a3b2d;
+    color: white;
+    text-align: center;
+}
+.produto-selecionado {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.produto-selecionado img {
+    width: 200px;
+    border-radius: 8px;
+}
+
+.produto-selecionado h2 {
+    font-size: 24px;
+    margin-top: 10px;
+}
+
+.produto-selecionado p {
+    font-size: 20px;
+    font-weight: bold;
+    color: #d4a373;
+    margin-top: 5px;
+}
+
+.formulario-compra {
+    text-align: center;
+    padding: 20px;
+}
+
+.formulario-compra form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: auto;
+}
+
+.formulario-compra input {
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.formulario-compra button {
+    background: #d4a373;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s ease-in-out;
+}
+
+.formulario-compra button:hover {
+    background: #b87a5b;
+}
+
+footer{
+    background: #4a3b2d;
+    color: white;
+    padding: 30px;
+    margin-top: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

@@ -10,6 +10,44 @@
 
     <header>
         <h1>Novos Lançamentos</h1>
+        <div class="menu-hamburguer" onclick="toggleMenu()">
+            &#9776;
+        </div>
+        <nav id="menuNav" class="menu-nav">
+            <ul>
+                <li><a href="#" onclick="abrirModalLogin()">Login</a></li>
+                <li><a href="#" onclick="abrirModalCadastro()">Cadastro</a></li>
+            </ul>
+        </nav>
+        
+        <!-- Modal Login -->
+        <div id="loginModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="fecharModais()">&times;</span>
+                <h2>Login</h2>
+                <form>
+                    <input type="email" placeholder="Email" required>
+                    <input type="password" placeholder="Senha" required>
+                    <button type="submit">Entrar</button>
+                </form>
+            </div>
+        </div>
+        
+        <!-- Modal Cadastro -->
+        <div id="cadastroModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="fecharModais()">&times;</span>
+                <h2>Cadastro</h2>
+                <form>
+                    <input type="text" placeholder="Nome Completo" required>
+                    <input type="email" placeholder="Email" required>
+                    <input type="password" placeholder="Senha" required>
+                    <input type="text" placeholder="Endereço" required>
+                    <button type="submit">Cadastrar</button>
+                </form>
+            </div>
+        </div>
+        
     </header>
 
     <main>
@@ -18,18 +56,21 @@
                 <img src="https://images.tcdn.com.br/img/img_prod/497964/joias_folheadas_kit_5_aneis_luxo_atacado_revenda_1600031386_2_20221020151054.jpg" alt="Anel Poderosa">
                 <h2>Anel Poderosa</h2>
                 <p>R$109,00</p>
+                <button class="comprar-btn" onclick="comprarProduto()">Comprar</button>
             </div>
 
             <div class="produto">
                 <img src="https://cdn.sistemawbuy.com.br/arquivos/a6be8a66e0528ff4ff022e4b0680ad7e/blogitens/como-cuidar-das-joias-folheadas-65f1075645e561.jpg" alt="Conjunto Diva">
                 <h2>Conjunto Diva</h2>
                 <p>R$109,00</p>
+                <button class="comprar-btn" onclick="comprarProduto()">Comprar</button>
             </div>
 
             <div class="produto">
                 <img src="https://blog.ceudeprata.com.br/wp-content/uploads/2023/06/ezgif.com-resize.png" alt="Colar Medalhão">
                 <h2>Colar Medalhão</h2>
                 <p>R$109,00</p>
+                <button class="comprar-btn" onclick="comprarProduto()">Comprar</button>
             </div>
         </section>
 
@@ -38,23 +79,27 @@
               <img src="https://images.tcdn.com.br/img/img_prod/497964/joias_folheadas_kit_5_aneis_luxo_atacado_revenda_1600031386_2_20221020151054.jpg" alt="Anel Poderosa">
               <h2>Anel Poderosa</h2>
               <p>R$109,00</p>
+              <button class="comprar-btn" onclick="comprarProduto()">Comprar</button>
+            
           </div>
 
           <div class="produto">
               <img src="https://cdn.sistemawbuy.com.br/arquivos/a6be8a66e0528ff4ff022e4b0680ad7e/blogitens/como-cuidar-das-joias-folheadas-65f1075645e561.jpg" alt="Conjunto Diva">
               <h2>Conjunto Diva</h2>
               <p>R$109,00</p>
+              <button class="comprar-btn" onclick="comprarProduto()">Comprar</button>
           </div>
 
           <div class="produto">
               <img src="https://blog.ceudeprata.com.br/wp-content/uploads/2023/06/ezgif.com-resize.png" alt="Colar Medalhão">
               <h2>Colar Medalhão</h2>
               <p>R$109,00</p>
+              <button class="comprar-btn" onclick="comprarProduto()">Comprar</button>
           </div>
       </section>
 
       <div class="botao-container">
-          <a href="excursao.html" class="botao">Saiba Mais Sobre o Cashback Solidário</a>
+          <a href="/pages/excursao.html" class="botao">Saiba Mais Sobre o Cashback Solidário</a>
       </div>
     </main>
 
@@ -73,5 +118,6 @@
     </footer>
 
     <script src="script.js"></script>
+    <script src="/assets/scripts/compra.js"></script>
 </body>
 </html>
