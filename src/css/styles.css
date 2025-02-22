@@ -44,14 +44,9 @@ header {
   align-items: center;
 }
 
-.container h1 {
-  margin-left: -175px;	
-}
-
 .container p{
     font-size: 1.1rem;
     color: #600000;
-    margin-left: -175px;
 }
 
 /* Navegação */
