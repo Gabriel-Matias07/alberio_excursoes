@@ -1,123 +1,162 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Novos Lançamentos - Example and Example</title>
-    <link rel="stylesheet" href="src/css/styles.css">
-</head>
-<body>
+  <head>
+    <!-- Metadados -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alberio Excursões</title>
 
+    <!-- Estilos -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="src/css/styles.css" />
+  </head>
+
+  <body>
+    <!-- Cabeçalho -->
     <header>
-        <h1>Novos Lançamentos</h1>
-        <div class="menu-hamburguer" onclick="toggleMenu()">
-            &#9776;
-        </div>
-        <nav id="menuNav" class="menu-nav">
-            <ul>
-                <li><a href="#" onclick="abrirModalLogin()">Login</a></li>
-                <li><a href="#" onclick="abrirModalCadastro()">Cadastro</a></li>
-            </ul>
+      <div class="container">
+        <h1
+          style="
+            color: #600000;
+            text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.7);
+          "
+        >
+          Alberio Excursões
+        </h1>
+        <nav>
+          <ul>
+            <li><a href="#sobre">Inicio</a></li>
+            <li><a href="#destinos">Destinos</a></li>
+            <li><a href="#contato">Contato</a></li>
+            <li><a href="#login">Login</a></li>
+            <li><a href="#cadastro">Cadastro</a></li>
+          </ul>
         </nav>
-        
-        <!-- Modal Login -->
-        <div id="loginModal" class="modal">
-            <div class="modal-content">
-                <span class="close" onclick="fecharModais()">&times;</span>
-                <h2>Login</h2>
-                <form>
-                    <input type="email" placeholder="Email" required>
-                    <input type="password" placeholder="Senha" required>
-                    <button type="submit">Entrar</button>
-                </form>
-            </div>
-        </div>
-        
-        <!-- Modal Cadastro -->
-        <div id="cadastroModal" class="modal">
-            <div class="modal-content">
-                <span class="close" onclick="fecharModais()">&times;</span>
-                <h2>Cadastro</h2>
-                <form>
-                    <input type="text" placeholder="Nome Completo" required>
-                    <input type="email" placeholder="Email" required>
-                    <input type="password" placeholder="Senha" required>
-                    <input type="text" placeholder="Endereço" required>
-                    <button type="submit">Cadastrar</button>
-                </form>
-            </div>
-        </div>
-        
+      </div>
     </header>
 
     <main>
-        <section class="produtos">
-            <div class="produto">
-                <img src="https://images.tcdn.com.br/img/img_prod/497964/joias_folheadas_kit_5_aneis_luxo_atacado_revenda_1600031386_2_20221020151054.jpg" alt="Anel Poderosa">
-                <h2>Anel Poderosa</h2>
-                <p>R$109,00</p>
-                <button class="comprar-btn" onclick="comprarProduto()">Comprar</button>
-            </div>
-
-            <div class="produto">
-                <img src="https://cdn.sistemawbuy.com.br/arquivos/a6be8a66e0528ff4ff022e4b0680ad7e/blogitens/como-cuidar-das-joias-folheadas-65f1075645e561.jpg" alt="Conjunto Diva">
-                <h2>Conjunto Diva</h2>
-                <p>R$109,00</p>
-                <button class="comprar-btn" onclick="comprarProduto()">Comprar</button>
-            </div>
-
-            <div class="produto">
-                <img src="https://blog.ceudeprata.com.br/wp-content/uploads/2023/06/ezgif.com-resize.png" alt="Colar Medalhão">
-                <h2>Colar Medalhão</h2>
-                <p>R$109,00</p>
-                <button class="comprar-btn" onclick="comprarProduto()">Comprar</button>
-            </div>
-        </section>
-
-        <section class="produtos">
-          <div class="produto">
-              <img src="https://images.tcdn.com.br/img/img_prod/497964/joias_folheadas_kit_5_aneis_luxo_atacado_revenda_1600031386_2_20221020151054.jpg" alt="Anel Poderosa">
-              <h2>Anel Poderosa</h2>
-              <p>R$109,00</p>
-              <button class="comprar-btn" onclick="comprarProduto()">Comprar</button>
-            
+      <!-- Carrossel -->
+      <div
+        id="carouselExampleIndicators"
+        class="carousel slide"
+        data-ride="carousel"
+      >
+        <ol class="carousel-indicators">
+          <li
+            data-target="#carouselExampleIndicators"
+            data-slide-to="0"
+            class="active"
+          ></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img
+              class="d-block w-100"
+              src="https://www.maracaturturismo.com.br/wp-content/uploads/2018/06/jericoacoara-pousadas.jpg"
+              alt="Primeiro Slide"
+            />
           </div>
-
-          <div class="produto">
-              <img src="https://cdn.sistemawbuy.com.br/arquivos/a6be8a66e0528ff4ff022e4b0680ad7e/blogitens/como-cuidar-das-joias-folheadas-65f1075645e561.jpg" alt="Conjunto Diva">
-              <h2>Conjunto Diva</h2>
-              <p>R$109,00</p>
-              <button class="comprar-btn" onclick="comprarProduto()">Comprar</button>
+          <div class="carousel-item">
+            <img
+              class="d-block w-100"
+              src="https://blog.123milhas.com/wp-content/uploads/2022/05/tipos-de-turismo-para-fazer-no-brasil-ecoturismo-cultural-gastronomico-conexao123.png.jpg"
+              alt="Segundo Slide"
+            />
           </div>
-
-          <div class="produto">
-              <img src="https://blog.ceudeprata.com.br/wp-content/uploads/2023/06/ezgif.com-resize.png" alt="Colar Medalhão">
-              <h2>Colar Medalhão</h2>
-              <p>R$109,00</p>
-              <button class="comprar-btn" onclick="comprarProduto()">Comprar</button>
+          <div class="carousel-item">
+            <img
+              class="d-block w-100"
+              src="https://neon.com.br/aprenda/wp-content/uploads/2023/12/viajar-de-onibus.png"
+              alt="Terceiro Slide"
+            />
           </div>
-      </section>
-
-      <div class="botao-container">
-          <a href="src/html/excursao.html" class="botao">Saiba Mais Sobre o Cashback Solidário</a>
+        </div>
+        <a
+          class="carousel-control-prev"
+          href="#carouselExampleIndicators"
+          role="button"
+          data-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Anterior</span>
+        </a>
+        <a
+          class="carousel-control-next"
+          href="#carouselExampleIndicators"
+          role="button"
+          data-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Próximo</span>
+        </a>
       </div>
+
+      <!-- Seção de Destinos -->
+      <section id="destinos" class="content">
+        <h2>Nossos Destinos</h2>
+        <div class="grid">
+          <div class="destino">
+            <img src="alberioexcursoes.jpg" alt="Destino 1" />
+            <h3>Destino 1</h3>
+            <p>Descrição breve do destino.</p>
+            <button class="btn-comprar">Comprar</button>
+          </div>
+          <div class="destino">
+            <img src="alberioexcursoes.jpg" alt="Destino 2" />
+            <h3>Destino 2</h3>
+            <p>Descrição breve do destino.</p>
+            <button class="btn-comprar">Comprar</button>
+          </div>
+          <div class="destino">
+            <img src="alberioexcursoes.jpg" alt="Destino 3" />
+            <h3>Destino 3</h3>
+            <p>Descrição breve do destino.</p>
+            <button class="btn-comprar">Comprar</button>
+          </div>
+          <div class="destino">
+            <img src="alberioexcursoes.jpg" alt="Destino 4" />
+            <h3>Destino 4</h3>
+            <p>Descrição breve do destino.</p>
+            <button class="btn-comprar">Comprar</button>
+          </div>
+        </div>
+      </section>
     </main>
 
+    <!-- Rodapé -->
     <footer>
-        <div class="info">
-            <h2>Example</h2>
-            <p>Acessórios Atemporais</p>
-            <p>Contato: (xx) xxxx-xxxx</p>
-            <p>Redes sociais: @teste</p>
-            <p>Site: teste.com.br</p>
-        </div>
-        <div class="cupom">
-            <p>Utilize o cupom abaixo para ganhar 10% de desconto na primeira compra:</p>
-            <button id="cupomBtn">PRIMEIRACOMPRA</button>
-        </div>
+      <div class="container">
+        <p>
+          Contato: contato@alberioexcursões.com | Redes Sociais:
+          @alberioexcursões
+        </p>
+      </div>
     </footer>
 
-    <script src="src/javascript/compra.js"></script>
+    <!-- Scripts -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+      integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+      integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+      crossorigin="anonymous"
+    ></script>
     <script src="src/javascript/script.js"></script>
-</body>
+  </body>
 </html>
