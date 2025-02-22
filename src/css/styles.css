@@ -111,13 +111,14 @@ nav a:hover {
 }
 
 .destino img {
+    margin-bottom: 17px;
   width: 100%;
   border-radius: 8px;
 }
 
 /* Botão de compra */
 .btn-comprar {
-  margin-top: 20px;
+    margin: 10px 0;
   background-color: #600000;
   color: #ffffff;
   padding: 10px 20px;
@@ -160,8 +161,7 @@ p {
   object-fit: cover;
 }
 
-
-
+/* Botão flutuante do WhatsApp */
   .whatsapp-float {
     position: fixed;
     bottom: 70px;
