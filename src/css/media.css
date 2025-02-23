@@ -1,0 +1,128 @@
+/* Estilos responsivos */
+
+/* Para telas menores que 1200px (tablets grandes) */
+@media (max-width: 1199px) {
+  /* Ocultar cabeçalho e carousel */
+  header {
+    display: none;
+  }
+
+  #carouselExampleIndicators {
+    display: none !important;
+  }
+
+  /* Ocultar título e parágrafo na tela principal */
+  .container h1,
+  .container p {
+    display: none;
+  }
+
+  .container {
+    width: 90%;
+  }
+}
+
+/* Para telas menores que 992px (tablets) */
+@media (max-width: 991px) {
+  nav {
+    background-color: #600000;
+    padding: 10px;
+  }
+
+  /* Organizar o menu de navegação em coluna */
+  nav ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  /* Estilização dos links de navegação */
+  nav a {
+    color: white;
+    font-size: 1.2rem;
+  }
+
+  .container h1,
+  .container p {
+    margin-left: 0;
+    text-align: center;
+  }
+
+  /* Ajuste do grid para exibição de cartões */
+  .grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+
+  /* Ajustar posição do botão flutuante */
+  .whatsapp-float {
+    bottom: 20px;
+    right: 20px;
+  }
+}
+
+/* Para telas menores que 768px (celulares grandes) */
+@media (max-width: 767px) {
+  header {
+    padding: 10px;
+  }
+
+  /* Organizar o menu de navegação em coluna */
+  nav ul {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  /* Ajuste do grid para exibição de cartões */
+  .grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+}
+
+/* Para telas menores que 576px (celulares pequenos) */
+@media (max-width: 575px) {
+  body {
+    padding-top: 60px; /* Ajuste no topo para evitar sobreposição com o cabeçalho */
+  }
+
+  .container {
+    width: 100%;
+    padding: 0 10px;
+  }
+
+  /* Ajuste no título do cabeçalho */
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  nav {
+    background-color: #600000;
+    padding: 10px;
+  }
+
+  /* Organizar o menu de navegação em coluna */
+  nav ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+  }
+
+  /* Ajuste do tamanho do link de navegação */
+  nav a {
+    color: white;
+    font-size: 1rem;
+    padding: 5px;
+  }
+
+  /* Ajuste no botão flutuante do WhatsApp */
+  .whatsapp-float {
+    width: 50px;
+    height: 50px;
+  }
+
+  .whatsapp-float img {
+    width: 30px;
+    height: 30px;
+  }
+}
