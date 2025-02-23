@@ -1,41 +1,21 @@
-document.getElementById("cupomBtn").addEventListener("click", function() {
-    navigator.clipboard.writeText("PRIMEIRACOMPRA");
-    alert("Cupom copiado: PRIMEIRACOMPRA");
-});
-
-function abrirModalLogin() {
-    document.getElementById("loginModal").style.display = "flex";
-}
-
-function abrirModalCadastro() {
-    fecharModais();
-    document.getElementById("cadastroModal").style.display = "flex";
-}
-
-function fecharModais() {
-    document.getElementById("loginModal").style.display = "none";
-    document.getElementById("cadastroModal").style.display = "none";
-}
-
-function toggleMenu() {
-    var menu = document.getElementById("menuNav");
-    if (menu.style.display === "block") {
-        menu.style.display = "none";
+function togglePassword(inputId, checkbox) {
+    let senhaInput = document.getElementById(inputId);
+    if (senhaInput.type === "password") {
+      senhaInput.type = "text";
     } else {
-        menu.style.display = "block";
+      senhaInput.type = "password";
     }
-}
+  }
 
-function abrirModalLogin() {
-    document.getElementById("loginModal").style.display = "flex";
-}
-
-function abrirModalCadastro() {
-    fecharModais();
-    document.getElementById("cadastroModal").style.display = "flex";
-}
-
-function fecharModais() {
-    document.getElementById("loginModal").style.display = "none";
-    document.getElementById("cadastroModal").style.display = "none";
-}
+  $(document).ready(function () {
+    // Quando clicar para abrir o modal de login
+    $('[data-target="#loginModal"]').click(function () {
+      $('#cadastroModal').modal('hide'); // Fecha o modal de cadastro
+    });
+  
+    // Quando clicar para abrir o modal de cadastro
+    $('[data-target="#cadastroModal"]').click(function () {
+      $('#loginModal').modal('hide'); // Fecha o modal de login
+    });
+  });
+  
