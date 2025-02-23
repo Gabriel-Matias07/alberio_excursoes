@@ -44,9 +44,9 @@ header {
   align-items: center;
 }
 
-.container p{
-    font-size: 1.1rem;
-    color: #600000;
+.container p {
+  font-size: 1.1rem;
+  color: #600000;
 }
 
 /* Navegação */
@@ -62,7 +62,7 @@ nav ul li {
 }
 
 nav a {
-    font-size: 1.2rem;
+  font-size: 1.2rem;
   color: #600000;
   text-decoration: none;
   font-weight: bold;
@@ -106,14 +106,14 @@ nav a:hover {
 }
 
 .destino img {
-    margin-bottom: 17px;
+  margin-bottom: 17px;
   width: 100%;
   border-radius: 8px;
 }
 
 /* Botão de compra */
 .btn-comprar {
-    margin: 10px 0;
+  margin: 10px 0;
   background-color: #600000;
   color: #ffffff;
   padding: 10px 20px;
@@ -157,28 +157,28 @@ p {
 }
 
 /* Botão flutuante do WhatsApp */
-  .whatsapp-float {
-    position: fixed;
-    bottom: 70px;
-    right: 70px;
-    width: 60px;
-    height: 60px;
-    background-color: #25d366;
-    border-radius: 50%;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-  }
+.whatsapp-float {
+  position: fixed;
+  bottom: 70px;
+  right: 70px;
+  width: 60px;
+  height: 60px;
+  background-color: #25d366;
+  border-radius: 50%;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
 
-  .whatsapp-float img {
-    width: 40px;
-    height: 40px;
-  }
+.whatsapp-float img {
+  width: 40px;
+  height: 40px;
+}
 
-  .whatsapp-float:hover {
-    width: 70px;
-    height: 70px;
-    transition: 0.3s ease-in-out;
-  }
+.whatsapp-float:hover {
+  width: 70px;
+  height: 70px;
+  transition: 0.3s ease-in-out;
+}
