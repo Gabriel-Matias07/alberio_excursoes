@@ -18,6 +18,8 @@
   </head>
 
   <body>
+
+    
     <!-- Cabeçalho -->
     <header>
       <div class="container">
@@ -35,12 +37,91 @@
             <li><a href="#sobre-nos">Sobre</a></li>
             <li><a href="#destinos">Destinos</a></li>
             <li><a href="#contato">Contato</a></li>
-            <li><a href="#login">Login</a></li>
-            <li><a href="#cadastro">Cadastro</a></li>
+            <li><a href="#" data-toggle="modal" data-target="#loginModal">Login</a></li>
+            <li><a href="#" data-toggle="modal" data-target="#cadastroModal">Cadastro</a></li>
           </ul>
         </nav>
       </div>
     </header>
+
+<!-- Modal de Cadastro -->
+<div class="modal fade" id="cadastroModal" tabindex="-1" role="dialog" aria-labelledby="cadastroModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="cadastroModalLabel">Abra uma conta para aproveitar o melhor do Alberio Excursões</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <label for="nome">Nome</label>
+            <input type="text" class="form-control" id="nome" placeholder="Nome" required>
+          </div>
+          <div class="form-group">
+            <label for="sobrenome">Sobrenome</label>
+            <input type="text" class="form-control" id="sobrenome" placeholder="Sobrenome" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Endereço de e-mail</label>
+            <input type="email" class="form-control" id="email" placeholder="E-mail" required>
+          </div>
+          <div class="form-group">
+            <label for="senha">Crie uma senha</label>
+            <input type="password" class="form-control" id="senha" placeholder="Senha" required>
+            <nav id="senha-color"> 
+              <input type="checkbox" onclick="togglePassword('senha', this)"> Mostrar senha
+            </nav>
+          </div>
+          <div class="form-group form-check">
+            <input type="checkbox" class="form-check-input" id="ofertas">
+            <label class="form-check-label" for="ofertas">Sim, quero saber das ofertas e dos novos recursos. Sei que posso deixar de receber essas informações quando quiser.</label>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">Inscreva-se</button>
+        </form>
+        <hr>
+        <p class="text-center">Já tem conta? <a href="#" data-toggle="modal" data-target="#loginModal">Faça login</a> usando sua conta.</p>
+        <p class="text-center small">Ao continuar, você concorda com os <a href="#">Termos de uso</a> e confirma que leu nossa <a href="#">Política de privacidade e cookies</a>.</p>
+        <p class="text-center small">Este site é protegido por reCAPTCHA e sujeito à <a href="#">Política de privacidade</a> e aos <a href="#">Termos de serviço</a> do Google.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal de Login -->
+<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="loginModalLabel">Faça login na sua conta</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <label for="login-email">Endereço de e-mail</label>
+            <input type="email" class="form-control" id="login-email" placeholder="E-mail" required>
+          </div>
+          <div class="form-group">
+            <label for="login-senha">Senha</label>
+            <input type="password" class="form-control" id="login-senha" placeholder="Senha" required>
+             <nav id="senha-color"> 
+              <input type="checkbox" onclick="togglePassword('login-senha', this)"> Mostrar senha
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">Entrar</button>
+        </form>
+        <hr>
+        <p class="text-center">Ainda não tem conta? <a href="#" data-toggle="modal" data-target="#cadastroModal">Cadastre-se</a>.</p>
+        <p class="text-center small">Ao continuar, você concorda com os <a href="#">Termos de uso</a> e confirma que leu nossa <a href="#">Política de privacidade e cookies</a>.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
 
     <main>
       <!-- Carrossel -->
@@ -273,5 +354,7 @@
       integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
       crossorigin="anonymous"
     ></script>
+
+    <script src="src/javascript/script.js"></script>
   </body>
 </html>
