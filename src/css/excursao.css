@@ -3,7 +3,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 body {
@@ -81,7 +81,9 @@ header p {
 }
 
 /* Estilos das seções */
-.details, .expect, .policy {
+.details,
+.expect,
+.policy {
   background: white;
   padding: 20px;
   margin-bottom: 15px;
@@ -136,16 +138,16 @@ ul li {
 /* Responsividade */
 @media (max-width: 768px) {
   .details-grid {
-      grid-template-columns: 1fr;
+    grid-template-columns: 1fr;
   }
 
   .gallery-container {
-      flex-direction: column;
-      align-items: center;
+    flex-direction: column;
+    align-items: center;
   }
 
   .gallery-container img {
-      width: 90%;
-      height: auto;
+    width: 90%;
+    height: auto;
   }
 }

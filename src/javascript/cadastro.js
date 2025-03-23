@@ -31,18 +31,18 @@ document.addEventListener("DOMContentLoaded", function () {
             <button id="fecharModal">Fechar</button>
         </div>
     `;
-    
+
     document.body.appendChild(modal);
-    
+
     cadastroLink.addEventListener("click", function (event) {
         event.preventDefault();
         modal.style.display = "flex";
     });
-    
+
     document.getElementById("fecharModal").addEventListener("click", function () {
         modal.style.display = "none";
     });
-    
+
     window.addEventListener("click", function (event) {
         if (event.target === modal) {
             modal.style.display = "none";
