@@ -22,26 +22,26 @@ Abaixo está a estrutura do projeto (sujeito a mudanças):
 ├── .gitignore
 ├── README.md
 ├── backend
-│   ├── config
-│   │   └── database.js
-│   ├── package-lock.json
-│   ├── package.json
-│   └── server.js
+    ├── config
+    │   └── database.js
+    ├── package-lock.json
+    ├── package.json
+    └── server.js
 ├── card.jpg
 ├── favicon.ico
 ├── index.html
 └── src
     ├── css
-    │   ├── cadastro.css
-    │   ├── compra.css
-    │   ├── excursao.css
-    │   ├── media.css
-    │   └── styles.css
+        ├── cadastro.css
+        ├── compra.css
+        ├── excursao.css
+        ├── media.css
+        └── styles.css
     ├── html
-    │   ├── cadastro.html
-    │   ├── compra.html
-    │   ├── excursao.html
-    │   └── login.html
+        ├── cadastro.html
+        ├── compra.html
+        ├── excursao.html
+        └── login.html
     └── javascript
         ├── cadastro.js
         ├── compra.js
