@@ -14,6 +14,8 @@ Este projeto foi desenvolvido utilizando as seguintes tecnologias:
 - **CSS**: Estilização e layout
 - **JavaScript**: Interatividade do site
 - **Bootstrap**: Framework CSS para design responsivo
+- **NodeJS**: Back-end
+- **MySQL**: Banco de dados 
 
 ## 🗂 Estrutura do Projeto
 
