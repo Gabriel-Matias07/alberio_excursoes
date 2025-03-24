@@ -8,7 +8,7 @@ const router = express.Router();
 
 // Rota de Cadastro
 router.post("/register", async (req, res) => {
-    const { nome, email, senha } = req.body;
+    const { nome, sobrenome, email, senha } = req.body;
 
     if (!nome || !email || !senha) {
         return res.status(400).json({ message: "Todos os campos são obrigatórios!" });
@@ -27,7 +27,7 @@ router.post("/register", async (req, res) => {
         const hashedPassword = await bcrypt.hash(senha, salt);
 
         // Inserir no banco de dados
-        await db.execute("INSERT INTO usuarios (nome, email, senha) VALUES (?, ?, ?)", [nome, email, hashedPassword]);
+        await db.execute("INSERT INTO usuarios (nome, sobrenome, email, senha) VALUES (?, ?, ?, ?)", [nome, sobrenome, email, hashedPassword]);
 
         res.status(201).json({ message: "Usuário cadastrado com sucesso!" });
     } catch (error) {
