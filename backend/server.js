@@ -1,13 +1,15 @@
-const express = require('express');
-const cors = require('cors');
+const express = require("express");
+const cors = require("cors");
+const authRoutes = require("./routes/auth");
+
 const app = express();
 
 app.use(cors());
 app.use(express.json());
 
-app.get('/api/mensagem', (req, res) => {
-    res.json({ mensagem: "Bem-vindo ao back-end!" });
-});
+app.use("/auth", authRoutes);
 
-const PORT = 3000;
-app.listen(PORT, () => console.log(`Servidor rodando na porta ${PORT}`));
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, () => {
+    console.log(`Servidor rodando na porta ${PORT}`);
+});

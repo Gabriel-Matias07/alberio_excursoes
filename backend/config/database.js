@@ -1,23 +1,15 @@
-// Carrega as variáveis de ambiente do arquivo .env
+require('dotenv').config({ path: require('path').resolve(__dirname, '../.env') });
 
-require('dotenv').config({ path: require('path').resolve(__dirname, '../.env') });  //Caminho absoluto
+const mysql = require('mysql2/promise');
 
-// Configurar a conexão do node.js ao mysql
-
-const mysql = require('mysql2');
-const connection = mysql.createConnection({
+const db = mysql.createPool({
     host: process.env.DB_HOST,
     user: process.env.DB_USER,
     password: process.env.DB_PASSWORD,
-    database: process.env.DB_NAME
+    database: process.env.DB_NAME,
+    waitForConnections: true,
+    connectionLimit: 10,
+    queueLimit: 0
 });
 
-connection.connect(err => {
-    if (err) {
-        console.error('Erro ao conectar no MySQL:', err);
-    } else {
-        console.log('Conectado ao MySQL!');
-    }
-});
-
-module.exports = connection;
+module.exports = db;
