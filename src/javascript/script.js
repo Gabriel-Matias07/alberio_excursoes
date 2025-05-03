@@ -22,7 +22,52 @@ function togglePassword(inputId, checkbox) {
 
   // Consumir back-end
 
-  fetch('http://localhost:3000/api/mensagem')
-    .then(response => response.json())
-    .then(data => console.log(data.mensagem))
-    .catch(error => console.error('Erro:', error));
+    document.addEventListener("DOMContentLoaded", function () {
+      // Cadastro de usuário
+      document.querySelector("#cadastroModal form").addEventListener("submit", async function (event) {
+        event.preventDefault();
+    
+        const nome = document.querySelector("#nome").value;
+        const sobrenome = document.querySelector("#sobrenome").value;
+        const email = document.querySelector("#email").value;
+        const senha = document.querySelector("#senha").value;
+    
+        const response = await fetch("http://localhost:5001/auth/register", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ nome, sobrenome, email, senha }),
+        });
+    
+        const data = await response.json();
+        if (response.ok) {
+          alert("Cadastro realizado com sucesso!");
+          $("#cadastroModal").modal("hide");
+        } else {
+          alert("Erro: " + data.message);
+        }
+      });
+    
+      // Login de usuário
+      document.querySelector("#loginModal form").addEventListener("submit", async function (event) {
+        event.preventDefault();
+    
+        const email = document.querySelector("#login-email").value;
+        const senha = document.querySelector("#login-senha").value;
+    
+        const response = await fetch("http://localhost:5001/auth/login", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ email, senha }),
+        });
+    
+        const data = await response.json();
+        if (response.ok) {
+          localStorage.setItem("token", data.token);
+          alert("Login realizado com sucesso!");
+          $("#loginModal").modal("hide");
+        } else {
+          alert("Erro: " + data.message);
+        }
+      });
+     
+    }); 
